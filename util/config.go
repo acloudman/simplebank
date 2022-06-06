@@ -1,7 +1,6 @@
 package util
 
 import (
-	"fmt"
 	"time"
 
 	"github.com/spf13/viper"
@@ -19,7 +18,6 @@ type Config struct {
 }
 
 func LoadConfig(path string) (config Config, err error) {
-	fmt.Println("path:", path)
 	viper.AddConfigPath(path)
 	viper.SetConfigName("app")
 	viper.SetConfigType("env")
